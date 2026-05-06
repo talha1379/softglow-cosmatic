@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About NoorAI — Clean Beauty Powered by AI" },
+      { title: "About SoftGlow — Clean Beauty Powered by AI" },
       { name: "description", content: "Our mission: blend dermatologist science with AI to make beauty radically personal, clean, and inclusive." },
     ],
   }),
@@ -19,7 +19,7 @@ function About() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Our Story</p>
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6">Beauty, <span className="italic text-gold-gradient">reimagined</span>.</h1>
-          <p className="text-lg text-muted-foreground">We started NoorAI with one belief: every skin deserves a routine as unique as its owner. By blending dermatology with AI, we make personalized beauty effortless.</p>
+          <p className="text-lg text-muted-foreground">We started SoftGlow with one belief: every skin deserves a routine as unique as its owner. By blending dermatology with AI, we make personalized beauty effortless.</p>
         </div>
       </section>
 

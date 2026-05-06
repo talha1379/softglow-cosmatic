@@ -1,14 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import heroImg from "@/assets/hero-product.jpg";
-import productsImg from "@/assets/products-collection.jpg";
+import p8 from "@/assets/product-8-night.jpg";
+import p9 from "@/assets/product-9-mist.jpg";
+import p3 from "@/assets/product-3-serum.jpg";
+import p6 from "@/assets/product-6-cream.jpg";
 import { ArrowRight, Sparkles, Bot, Scan, Star, Leaf, Shield, Zap } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "NoorAI — AI-Powered 3D Cosmetic Experience" },
+      { title: "SoftGlow — AI-Powered 3D Cosmetic Experience" },
       { name: "description", content: "Discover the future of beauty: immersive 3D products, AI skin analysis, and personalized routines crafted for your radiance." },
     ],
   }),
@@ -78,7 +81,7 @@ function Home() {
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why NoorAI</p>
+          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why SoftGlow</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold">A new ritual of beauty</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -113,14 +116,14 @@ function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Night Repair Elixir", price: "Rs 10,560", tag: "Award" },
-              { name: "Rose Glow Mist", price: "Rs 3,795", tag: "Vegan" },
-              { name: "Gold Radiance Serum", price: "Rs 7,920", tag: "Bestseller" },
-              { name: "Velvet Hydra Cream", price: "Rs 6,240", tag: "New" },
-            ].map((p, i) => (
+              { name: "Night Repair Elixir", price: "Rs 10,560", tag: "Award", img: p8 },
+              { name: "Rose Glow Mist", price: "Rs 3,795", tag: "Vegan", img: p9 },
+              { name: "Gold Radiance Serum", price: "Rs 7,920", tag: "Bestseller", img: p3 },
+              { name: "Velvet Hydra Cream", price: "Rs 6,240", tag: "New", img: p6 },
+            ].map((p) => (
               <div key={p.name} className="group relative bg-card rounded-3xl overflow-hidden border border-border hover:shadow-luxe transition-all">
                 <div className="aspect-square bg-hero-gradient relative overflow-hidden">
-                  <img src={productsImg} alt={p.name} loading="lazy" width={1536} height={1024} className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition duration-700" style={{ objectPosition: `${25 + i*15}% 50%` }} />
+                  <img src={p.img} alt={p.name} loading="lazy" width={768} height={960} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
                   <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-card/90 backdrop-blur text-xs font-semibold">{p.tag}</span>
                 </div>
                 <div className="p-5">

@@ -38,7 +38,7 @@ export function Navbar() {
             <Sparkles className="size-5 text-white" />
           </div>
           <span className="font-display text-2xl font-bold tracking-tight">
-            Noor<span className="text-gold-gradient">AI</span>
+            Soft<span className="text-gold-gradient">Glow</span>
           </span>
         </Link>
 

@@ -1,14 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import productsImg from "@/assets/products-collection.jpg";
+import p1 from "@/assets/product-1-mask.jpg";
+import p2 from "@/assets/product-2-lip.jpg";
+import p3 from "@/assets/product-3-serum.jpg";
+import p4 from "@/assets/product-4-sunscreen.jpg";
+import p5 from "@/assets/product-5-eye.jpg";
+import p6 from "@/assets/product-6-cream.jpg";
+import p7 from "@/assets/product-7-cleanser.jpg";
+import p8 from "@/assets/product-8-night.jpg";
+import p9 from "@/assets/product-9-mist.jpg";
 import { useState } from "react";
 import { Filter, Sparkles } from "lucide-react";
+
+const productImgs = [p1, p2, p3, p4, p5, p6, p7, p8, p9];
 
 export const Route = createFileRoute("/products")({
   component: Products,
   head: () => ({
     meta: [
-      { title: "Products — NoorAI 3D Showcase" },
+      { title: "Products — SoftGlow 3D Showcase" },
       { name: "description", content: "Explore our luxury skincare collection in immersive 3D. Serums, creams, mists and more." },
     ],
   }),
@@ -66,7 +76,7 @@ function Products() {
               className="group cursor-pointer relative bg-card rounded-3xl overflow-hidden border border-border hover:shadow-luxe transition-all hover:-translate-y-1"
             >
               <div className="aspect-[4/5] bg-hero-gradient relative overflow-hidden">
-                <img src={productsImg} alt={p.name} loading="lazy" width={1536} height={1024} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" style={{ objectPosition: `${(i*20) % 100}% 50%` }} />
+                <img src={productImgs[i]} alt={p.name} loading="lazy" width={768} height={960} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
                 <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-card/90 backdrop-blur text-xs font-semibold flex items-center gap-1">
                   <Sparkles className="size-3 text-gold" /> 3D
                 </span>
@@ -88,7 +98,7 @@ function Products() {
         <div className="fixed inset-0 z-50 bg-foreground/40 backdrop-blur-sm grid place-items-end" onClick={() => setActive(null)}>
           <div className="bg-card w-full max-w-md h-full p-8 overflow-auto" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setActive(null)} className="text-sm text-muted-foreground mb-6">← Close</button>
-            <img src={productsImg} alt="" className="w-full aspect-square object-cover rounded-2xl mb-6" />
+            <img src={productImgs[active]} alt="" className="w-full aspect-square object-cover rounded-2xl mb-6" />
             <h2 className="font-display text-3xl mb-2">{products[active].name}</h2>
             <p className="text-2xl text-gold-gradient font-semibold mb-4">{products[active].price}</p>
             <p className="text-muted-foreground mb-6">A luxurious formula crafted with botanical extracts and clinically-proven actives for visibly radiant skin.</p>
