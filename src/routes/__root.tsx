@@ -29,10 +29,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NoorAI — AI-Powered 3D Cosmetic Experience" },
+      { title: "SoftGlow — AI-Powered 3D Cosmetic Experience" },
       { name: "description", content: "Discover the future of beauty: immersive 3D products, AI skin analysis, and personalized routines crafted for your radiance." },
-      { name: "author", content: "NoorAI" },
-      { property: "og:title", content: "NoorAI — AI-Powered 3D Cosmetic Experience" },
+      { name: "author", content: "SoftGlow" },
+      { property: "og:title", content: "SoftGlow — AI-Powered 3D Cosmetic Experience" },
       { property: "og:description", content: "Immersive 3D products, AI skin analysis, and personalized routines." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

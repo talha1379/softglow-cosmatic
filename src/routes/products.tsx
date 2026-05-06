@@ -8,7 +8,7 @@ export const Route = createFileRoute("/products")({
   component: Products,
   head: () => ({
     meta: [
-      { title: "Products — NoorAI 3D Showcase" },
+      { title: "Products — SoftGlow 3D Showcase" },
       { name: "description", content: "Explore our luxury skincare collection in immersive 3D. Serums, creams, mists and more." },
     ],
   }),

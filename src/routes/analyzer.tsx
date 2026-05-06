@@ -7,7 +7,7 @@ export const Route = createFileRoute("/analyzer")({
   component: Analyzer,
   head: () => ({
     meta: [
-      { title: "Skin Analyzer — Personalized Routine | NoorAI" },
+      { title: "Skin Analyzer — Personalized Routine | SoftGlow" },
       { name: "description", content: "AI-powered skin quiz: get a personalized morning and night routine in 2 minutes." },
     ],
   }),

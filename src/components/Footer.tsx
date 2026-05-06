@@ -46,7 +46,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-        © 2026 NoorAI. Crafted with ✨ for radiant skin.
+        © 2026 SoftGlow. Crafted with ✨ for radiant skin.
       </div>
     </footer>
   );
