@@ -7,7 +7,7 @@ export const Route = createFileRoute("/chatbot")({
   component: Chatbot,
   head: () => ({
     meta: [
-      { title: "AI Beauty Chat — GlowAI" },
+      { title: "AI Beauty Chat — NoorAI" },
       { name: "description", content: "Your 24/7 AI beauty consultant. Ask about ingredients, routines, and product matches." },
     ],
   }),
@@ -17,14 +17,14 @@ type Msg = { role: "user" | "bot"; text: string };
 
 const quickReplies = [
   "Suggest a morning routine",
-  "Best serum under ₹2000",
+  "Best serum under Rs 6500",
   "Is Vitamin C safe for sensitive skin?",
   "How to layer products?",
 ];
 
 function Chatbot() {
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "bot", text: "Hi gorgeous ✨ I'm your GlowAI beauty consultant. Ask me anything — routines, ingredients, or product picks." },
+    { role: "bot", text: "Hi gorgeous ✨ I'm your NoorAI beauty consultant. Ask me anything — routines, ingredients, or product picks." },
   ]);
   const [input, setInput] = useState("");
   const ref = useRef<HTMLDivElement>(null);

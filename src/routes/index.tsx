@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "GlowAI — AI-Powered 3D Cosmetic Experience" },
+      { title: "NoorAI — AI-Powered 3D Cosmetic Experience" },
       { name: "description", content: "Discover the future of beauty: immersive 3D products, AI skin analysis, and personalized routines crafted for your radiance." },
     ],
   }),
@@ -78,7 +78,7 @@ function Home() {
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why GlowAI</p>
+          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why NoorAI</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold">A new ritual of beauty</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -113,10 +113,10 @@ function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Gold Radiance Serum", price: "₹2,400", tag: "Bestseller" },
-              { name: "Velvet Hydra Cream", price: "₹1,890", tag: "New" },
-              { name: "Rose Glow Mist", price: "₹1,150", tag: "Vegan" },
-              { name: "Night Repair Elixir", price: "₹3,200", tag: "Award" },
+              { name: "Night Repair Elixir", price: "Rs 10,560", tag: "Award" },
+              { name: "Rose Glow Mist", price: "Rs 3,795", tag: "Vegan" },
+              { name: "Gold Radiance Serum", price: "Rs 7,920", tag: "Bestseller" },
+              { name: "Velvet Hydra Cream", price: "Rs 6,240", tag: "New" },
             ].map((p, i) => (
               <div key={p.name} className="group relative bg-card rounded-3xl overflow-hidden border border-border hover:shadow-luxe transition-all">
                 <div className="aspect-square bg-hero-gradient relative overflow-hidden">

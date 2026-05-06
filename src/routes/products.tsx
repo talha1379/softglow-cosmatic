@@ -8,7 +8,7 @@ export const Route = createFileRoute("/products")({
   component: Products,
   head: () => ({
     meta: [
-      { title: "Products — GlowAI 3D Showcase" },
+      { title: "Products — NoorAI 3D Showcase" },
       { name: "description", content: "Explore our luxury skincare collection in immersive 3D. Serums, creams, mists and more." },
     ],
   }),
@@ -18,9 +18,9 @@ const categories = ["All", "Serums", "Moisturizers", "Cleansers", "Masks", "Suns
 
 const products = Array.from({ length: 9 }).map((_, i) => ({
   id: i,
-  name: ["Gold Radiance Serum", "Velvet Hydra Cream", "Rose Glow Mist", "Night Repair Elixir", "Pearl Cleanse Foam", "Saffron Bright Mask", "Aurora Eye Cream", "Honey Lip Balm", "Silk Sunscreen"][i],
-  price: ["₹2,400", "₹1,890", "₹1,150", "₹3,200", "₹990", "₹1,750", "₹2,100", "₹650", "₹1,490"][i],
-  category: ["Serums", "Moisturizers", "Mists", "Serums", "Cleansers", "Masks", "Eye Care", "Lip", "Sunscreen"][i],
+  name: ["Saffron Bright Mask", "Honey Lip Balm", "Gold Radiance Serum", "Silk Sunscreen", "Aurora Eye Cream", "Velvet Hydra Cream", "Pearl Cleanse Foam", "Night Repair Elixir", "Rose Glow Mist"][i],
+  price: ["Rs 5,775", "Rs 2,150", "Rs 7,920", "Rs 4,920", "Rs 6,930", "Rs 6,240", "Rs 3,270", "Rs 10,560", "Rs 3,795"][i],
+  category: ["Masks", "Lip", "Serums", "Sunscreen", "Eye Care", "Moisturizers", "Cleansers", "Serums", "Mists"][i],
   rating: 4.5 + (i % 5) * 0.1,
 }));
 
