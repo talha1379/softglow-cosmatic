@@ -11,7 +11,7 @@ export function Footer() {
               <Sparkles className="size-5 text-white" />
             </div>
             <span className="font-display text-2xl font-bold">
-              Noor<span className="text-gold-gradient">AI</span>
+              Soft<span className="text-gold-gradient">Glow</span>
             </span>
           </div>
           <p className="text-sm text-muted-foreground max-w-sm">
