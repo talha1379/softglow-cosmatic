@@ -17,7 +17,7 @@ type Msg = { role: "user" | "bot"; text: string };
 
 const quickReplies = [
   "Suggest a morning routine",
-  "Best serum under ₹2000",
+  "Best serum under Rs 6500",
   "Is Vitamin C safe for sensitive skin?",
   "How to layer products?",
 ];
