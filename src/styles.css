@@ -61,7 +61,12 @@
   --gold: oklch(0.78 0.13 75);
   --blush: oklch(0.86 0.08 15);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.94 0.05 20) 0%, oklch(0.9 0.07 320) 50%, oklch(0.88 0.08 280) 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.94 0.05 20) 0%,
+    oklch(0.9 0.07 320) 50%,
+    oklch(0.88 0.08 280) 100%
+  );
   --gradient-gold: linear-gradient(135deg, oklch(0.82 0.13 75), oklch(0.7 0.15 35));
   --gradient-glow: radial-gradient(circle at 50% 50%, oklch(0.9 0.1 340 / 0.4), transparent 70%);
   --shadow-luxe: 0 20px 60px -20px oklch(0.42 0.12 340 / 0.35);
@@ -91,31 +96,52 @@
   --gold: oklch(0.82 0.14 80);
   --blush: oklch(0.7 0.15 15);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.18 0.04 320) 0%, oklch(0.2 0.06 300) 50%, oklch(0.16 0.05 280) 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.18 0.04 320) 0%,
+    oklch(0.2 0.06 300) 50%,
+    oklch(0.16 0.05 280) 100%
+  );
   --shadow-luxe: 0 20px 60px -20px oklch(0.78 0.14 340 / 0.4);
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * {
+    border-color: var(--color-border);
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 @layer utilities {
-  .bg-hero-gradient { background: var(--gradient-hero); }
-  .bg-gold-gradient { background: var(--gradient-gold); }
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
   .text-gold-gradient {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .shadow-luxe { box-shadow: var(--shadow-luxe); }
-  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-luxe {
+    box-shadow: var(--shadow-luxe);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
   .glass {
     backdrop-filter: blur(16px) saturate(180%);
     background: color-mix(in oklab, var(--background) 70%, transparent);
@@ -127,14 +153,61 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(2deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
 }
-.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s ease;
+}
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-scene-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.loading-overlay {
+  background: rgba(12, 12, 14, 0.92);
+}
+.loader-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.7;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    opacity 0.25s ease;
+}
+.loader-dot-active {
+  transform: scale(1.1);
+  background: rgba(255, 214, 149, 0.95);
+  opacity: 1;
+}
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 .shimmer {
   background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.3), transparent);
@@ -142,4 +215,42 @@
   animation: shimmer 3s infinite;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: none;
+}
+
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none;
+  }
+}
+
+.custom-cursor-ring {
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.custom-cursor-dot {
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.horizontal-scroll-viewport {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.horizontal-scroll-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.touch-pan-x {
+  touch-action: pan-x;
+}
