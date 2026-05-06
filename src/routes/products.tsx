@@ -1,8 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import productsImg from "@/assets/products-collection.jpg";
+import p1 from "@/assets/product-1-mask.jpg";
+import p2 from "@/assets/product-2-lip.jpg";
+import p3 from "@/assets/product-3-serum.jpg";
+import p4 from "@/assets/product-4-sunscreen.jpg";
+import p5 from "@/assets/product-5-eye.jpg";
+import p6 from "@/assets/product-6-cream.jpg";
+import p7 from "@/assets/product-7-cleanser.jpg";
+import p8 from "@/assets/product-8-night.jpg";
+import p9 from "@/assets/product-9-mist.jpg";
 import { useState } from "react";
 import { Filter, Sparkles } from "lucide-react";
+
+const productImgs = [p1, p2, p3, p4, p5, p6, p7, p8, p9];
 
 export const Route = createFileRoute("/products")({
   component: Products,
