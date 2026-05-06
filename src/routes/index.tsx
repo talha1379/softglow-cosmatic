@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import heroImg from "@/assets/hero-product.jpg";
-import productsImg from "@/assets/products-collection.jpg";
+import p8 from "@/assets/product-8-night.jpg";
+import p9 from "@/assets/product-9-mist.jpg";
+import p3 from "@/assets/product-3-serum.jpg";
+import p6 from "@/assets/product-6-cream.jpg";
 import { ArrowRight, Sparkles, Bot, Scan, Star, Leaf, Shield, Zap } from "lucide-react";
 
 export const Route = createFileRoute("/")({
