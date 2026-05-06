@@ -76,7 +76,7 @@ function Products() {
               className="group cursor-pointer relative bg-card rounded-3xl overflow-hidden border border-border hover:shadow-luxe transition-all hover:-translate-y-1"
             >
               <div className="aspect-[4/5] bg-hero-gradient relative overflow-hidden">
-                <img src={productsImg} alt={p.name} loading="lazy" width={1536} height={1024} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" style={{ objectPosition: `${(i*20) % 100}% 50%` }} />
+                <img src={productImgs[i]} alt={p.name} loading="lazy" width={768} height={960} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
                 <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-card/90 backdrop-blur text-xs font-semibold flex items-center gap-1">
                   <Sparkles className="size-3 text-gold" /> 3D
                 </span>
