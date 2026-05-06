@@ -7,8 +7,8 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact GlowAI" },
-      { name: "description", content: "Get in touch with the GlowAI team — support, partnerships, wholesale inquiries." },
+      { title: "Contact NoorAI" },
+      { name: "description", content: "Get in touch with the NoorAI team — support, partnerships, wholesale inquiries." },
     ],
   }),
 });
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/contact")({
 const faqs = [
   { q: "How fast do you reply?", a: "We respond to every message within 24 hours, Monday through Saturday." },
   { q: "Do you ship internationally?", a: "Yes, we ship to 40+ countries with carbon-neutral shipping." },
-  { q: "Are products vegan?", a: "All GlowAI products are 100% vegan and cruelty-free." },
+  { q: "Are products vegan?", a: "All NoorAI products are 100% vegan and cruelty-free." },
   { q: "Can I return products?", a: "30-day no-questions-asked returns on all unopened items." },
   { q: "Do you offer wholesale?", a: "Yes — email partners@glowai.com for our wholesale catalog." },
 ];

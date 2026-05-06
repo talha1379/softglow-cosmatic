@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "GlowAI — AI-Powered 3D Cosmetic Experience" },
+      { title: "NoorAI — AI-Powered 3D Cosmetic Experience" },
       { name: "description", content: "Discover the future of beauty: immersive 3D products, AI skin analysis, and personalized routines crafted for your radiance." },
     ],
   }),
@@ -78,7 +78,7 @@ function Home() {
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why GlowAI</p>
+          <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">Why NoorAI</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold">A new ritual of beauty</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
