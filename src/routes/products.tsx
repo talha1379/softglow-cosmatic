@@ -98,7 +98,7 @@ function Products() {
         <div className="fixed inset-0 z-50 bg-foreground/40 backdrop-blur-sm grid place-items-end" onClick={() => setActive(null)}>
           <div className="bg-card w-full max-w-md h-full p-8 overflow-auto" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setActive(null)} className="text-sm text-muted-foreground mb-6">← Close</button>
-            <img src={productsImg} alt="" className="w-full aspect-square object-cover rounded-2xl mb-6" />
+            <img src={productImgs[active]} alt="" className="w-full aspect-square object-cover rounded-2xl mb-6" />
             <h2 className="font-display text-3xl mb-2">{products[active].name}</h2>
             <p className="text-2xl text-gold-gradient font-semibold mb-4">{products[active].price}</p>
             <p className="text-muted-foreground mb-6">A luxurious formula crafted with botanical extracts and clinically-proven actives for visibly radiant skin.</p>
